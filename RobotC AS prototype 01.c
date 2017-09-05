@@ -4,6 +4,8 @@
 #pragma config(Motor,  port5,           LiftMotor2,     tmotorVex269_HBridge, openLoop)
 #pragma config(Motor,  port6,           ClawMotor,     tmotorVex269_HBridge, openLoop)
 /* Code for Abomnible Snowflakes, In the Zone robot for Vex EDR - In the zone*/
+/* This robot has a double bar lift (with two motors acting as the lift). The chassis is a standard 'U' shape (with 2 motors - left and right). 
+At the end of the double bar lift is a standard vex claw (with one motor) */
 task main()
 {
 	while (true)
