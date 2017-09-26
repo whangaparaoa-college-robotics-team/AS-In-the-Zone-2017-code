@@ -21,8 +21,8 @@ task main()
 	while (true)
 	{
 		/* Drives left and right main motors */
-		motor[LeftMotor] = vexRT[Ch3];
-		motor[RightMotor] = vexRT[Ch2];
+		motor[LeftMotor] = vexRT[Ch3] * drivespeed;
+		motor[RightMotor] = vexRT[Ch2] * drivespeed;
 
 		/*Lift up */
 		if(vexRT[Btn6U] == 1)
@@ -33,8 +33,8 @@ task main()
 		/*Lift down */
 		else if(vexRT[Btn6D] == 1)
 		{
-			motor[LiftMotor1] = -50;
-			motor[LiftMotor2] = -50;
+			motor[LiftMotor1] = -10;
+			motor[LiftMotor2] = -10;
 		}
 
 		/*Stop lift */
@@ -61,7 +61,7 @@ task main()
 			motor[ClawMotor] = 0;
 		}
 		// Checks to see if button 7d is down
-		if (vexRT[Btn7D] ==1)
+		if (vexRT[Btn7U] ==1 || vexRT[Btn7U])
 		{
 			drivespeed = slowedDrivespeed;
 		}
